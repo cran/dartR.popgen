@@ -14,7 +14,7 @@
 #' @param pop.colors A color palette for box plots by population or a list
 #'  with as many colors as there are populations in the dataset
 #' [default NULL].
-#' @param plot.title Title of tyh plot [default " "].
+#' @param plot.title Title of the plot [default " "].
 #' @param plot.theme User specified theme [default NULL].
 #' @param plot.out Specify if plot is to be produced [default TRUE].
 #' @param plot.dir Directory in which to save files [default = working directory]
@@ -120,7 +120,7 @@ gl.ld.distance <- function(ld.report,
   distance <- ld.stat <- NULL
   p3 <-
     ggplot(bins_ld, aes(x = distance, y = ld.stat, colour = pop)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_point(size = 2) +
     geom_hline(
       aes(
@@ -128,7 +128,7 @@ gl.ld.distance <- function(ld.report,
         colour = "LD threshold for unlinked loci"
       ),
       color = "red",
-      size = 1
+      linewidth = 1
     ) +
     xlab("Base pairs") +
     ylab("Linkage disequilibrium") +

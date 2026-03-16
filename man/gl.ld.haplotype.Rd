@@ -16,7 +16,15 @@ gl.ld.haplotype(
   haplo_id = FALSE,
   min_snps = 10,
   ld_threshold_haplo = 0.5,
-  target_snp = NULL,
+  plot_het = TRUE,
+  snp_pos = TRUE,
+  target.snp1 = NULL,
+  target.snp2 = NULL,
+  target.snp3 = NULL,
+  col.all = "black",
+  col.target1 = "green",
+  col.target2 = "blue",
+  col.target3 = "red",
   coordinates = NULL,
   color_haplo = "viridis",
   color_het = "deeppink",
@@ -57,20 +65,44 @@ it [default 10].}
 \item{ld_threshold_haplo}{Minimum LD between adjacent SNPs to call a
 haplotype [default 0.5].}
 
-\item{target_snp}{Position of target SNP [default NULL].}
+\item{plot_het}{Whether to plot heterozygosity [default TRUE].}
+
+\item{snp_pos}{Whether to plot SNP positions [default TRUE].}
+
+\item{target.snp1}{Vector of position(s) of target SNP(s) in base pairs 
+[default NULL].}
+
+\item{target.snp2}{Vector of position(s) of target SNP(s) in base pairs 
+[default NULL].}
+
+\item{target.snp3}{Vector of position(s) of target SNP(s) in base pairs 
+[default NULL].}
+
+\item{col.all}{Color of line indicating position for all SNPs 
+[default "black"].}
+
+\item{col.target1}{Color of line indicating position for target.snp1 
+[default "green"].}
+
+\item{col.target2}{Color of line indicating position for target.snp2
+[default "blue"].}
+
+\item{col.target3}{Color of line indicating position for target.snp3
+[default "red"].}
 
 \item{coordinates}{A vector of two elements with the start and end
 coordinates in base pairs to which restrict the
 analysis e.g. c(1,1000000) [default NULL].}
 
-\item{color_haplo}{Color palette for haplotype plot. See details
-[default "viridis"].}
+\item{color_haplo}{Color palette for haplotype plot. Options are: "magma", 
+"inferno", "plasma", "viridis", "cividis", "rocket", "mako" and "turbo" 
+ [default "viridis"].}
 
 \item{color_het}{Color for heterozygosity [default "deeppink"].}
 
 \item{plot.out}{Specify if heatmap plot is to be produced [default TRUE].}
 
-\item{plot.save}{Whethwr to save the plot in pdf format [default FALSE].}
+\item{plot.save}{Whether to save the plot in pdf format [default FALSE].}
 
 \item{plot.dir}{Directory in which to save files [default = working directory]}
 
